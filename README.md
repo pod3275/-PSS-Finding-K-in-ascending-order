@@ -1,4 +1,4 @@
-# -PSS-Finding-K-in-ascending-order
+# -PSS-Finding-K-in-ascending-order-matrix
  - 2016년 1학기 성균관대학교 이진규 교수님의 문제해결기법 수업, 1번째 과제  
  - 오름차순으로 되어있는 행렬에서 특정 k를 가장 적은 search로 찾기
  - 2016 1st semester Sungkyunkwan University Professor Jinkyu Lee's Problem Solving Strategies Class, 1st assignment
