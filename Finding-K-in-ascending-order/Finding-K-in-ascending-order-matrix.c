@@ -144,7 +144,7 @@ int access_value(int x, int y) {
 }
 
 void cal_single(int k) {
-	int Kx, Ky, numconst, mid = LENGTH, i=0, j=0, c1=0; // Kx, Ky : k°ª ¿ø¼ÒÀÇ ÁÂÇ¥ ÀúÀå, numconst : Áßº¹ ÂüÁ¶¸¦ ¸·±â À§ÇÑ »ó¼ö º¯¼ö, mid : ±âÁØÁ¡ÀÇ x, y ÁÂÇ¥, i, j, c1 : while, for¹® »ó¼ö º¯¼ö
+	int Kx, Ky, numconst, mid = LENGTH, i=0, j=0, c1=0; // Kx, Ky : kê°’ ì›ì†Œì˜ ì¢Œí‘œ ì €ì¥, numconst : ì¤‘ë³µ ì°¸ì¡°ë¥¼ ë§‰ê¸° ìœ„í•œ ìƒìˆ˜ ë³€ìˆ˜, mid : ê¸°ì¤€ì ì˜ x, y ì¢Œí‘œ, i, j, c1 : while, forë¬¸ ìƒìˆ˜ ë³€ìˆ˜
 
 	while(c1<LENGTH){
 		numconst = access_value(c1,c1);
@@ -153,11 +153,11 @@ void cal_single(int k) {
 			break;
 		}
 		c1++;
-	} //±âÁØÁ¡ ¼³Á¤
+	} //ê¸°ì¤€ì  ì„¤ì •
 	
 	if(mid == LENGTH){
 		return;
-	} //±âÁØÁ¡ÀÌ ¾øÀ¸¸é ÇÔ¼ö return
+	} //ê¸°ì¤€ì ì´ ì—†ìœ¼ë©´ í•¨ìˆ˜ return
 	
 	if(k == numconst){
 		Kx = c1;
@@ -185,7 +185,7 @@ void cal_single(int k) {
 			}
 		}
 		j++;
-	} // ±âÁØÁ¡À» ±âÁØÀ¸·Î ¿À¸¥ÂÊ À§ ¿µ¿ªÀÇ ¿ø¼Òµé Á¶»ç
+	} // ê¸°ì¤€ì ì„ ê¸°ì¤€ìœ¼ë¡œ ì˜¤ë¥¸ìª½ ìœ„ ì˜ì—­ì˜ ì›ì†Œë“¤ ì¡°ì‚¬
 	
 	i=1; j=0;
 	while( mid - i >= 0){
@@ -206,19 +206,19 @@ void cal_single(int k) {
 			}
 		}
 		i++;
-	} // ±âÁØÁ¡À» ±âÁØÀ¸·Î ¿ŞÂÊ ¾Æ·¡ ¿µ¿ªÀÇ ¿ø¼Òµé Á¶»ç
+	} // ê¸°ì¤€ì ì„ ê¸°ì¤€ìœ¼ë¡œ ì™¼ìª½ ì•„ë˜ ì˜ì—­ì˜ ì›ì†Œë“¤ ì¡°ì‚¬
 	
 }
 
 void cal_all(int k) {
-	int *Kx, *Ky, Knum=0, numconst, mid = LENGTH, i=0, j=0, c1=0; // Kx, Ky : k°ª ¿ø¼ÒµéÀÇ x, yÁÂÇ¥¸¦ ÀúÀåÇÏ´Â 1Â÷¿ø ¹è¿­, Knum : k°ª ¿ø¼ÒÀÇ °³¼ö. ³ª¸ÓÁö´Â µ¿ÀÏ
+	int *Kx, *Ky, Knum=0, numconst, mid = LENGTH, i=0, j=0, c1=0; // Kx, Ky : kê°’ ì›ì†Œë“¤ì˜ x, yì¢Œí‘œë¥¼ ì €ì¥í•˜ëŠ” 1ì°¨ì› ë°°ì—´, Knum : kê°’ ì›ì†Œì˜ ê°œìˆ˜. ë‚˜ë¨¸ì§€ëŠ” ë™ì¼
 	
 	Kx=(int*)calloc(LENGTH*LENGTH,sizeof(int));
 	Ky=(int*)calloc(LENGTH*LENGTH,sizeof(int));
 	for(i=0;i<LENGTH*LENGTH;i++){
 		Kx[i] = 0;
 		Ky[i] = 0;
-	} // Kx, Ky¸¦ Å©±â LENGTH*LENGTH¸¸Å­ µ¿Àû ÇÒ´çÇÏ¿© 1Â÷¿ø ¹è¿­ »ı¼º.
+	} // Kx, Kyë¥¼ í¬ê¸° LENGTH*LENGTHë§Œí¼ ë™ì  í• ë‹¹í•˜ì—¬ 1ì°¨ì› ë°°ì—´ ìƒì„±.
 
 	while(c1<LENGTH){
 		numconst = access_value(c1,c1);
@@ -227,7 +227,7 @@ void cal_all(int k) {
 			break;
 		}
 		c1++;
-	} // ±âÁØÁ¡ÀÇ ÁÂÇ¥ ÀúÀå.
+	} // ê¸°ì¤€ì ì˜ ì¢Œí‘œ ì €ì¥.
 	
 	if(mid == LENGTH){
 		return;
@@ -270,7 +270,7 @@ void cal_all(int k) {
 			}
 			j++;
 		}
-	} // ±âÁØÁ¡ = k°ªÀÎ °æ¿ì, ¿À¸¥ÂÊ ¾Æ·¡ÀÇ ¿ø¼Òµé Á¶»ç
+	} // ê¸°ì¤€ì  = kê°’ì¸ ê²½ìš°, ì˜¤ë¥¸ìª½ ì•„ë˜ì˜ ì›ì†Œë“¤ ì¡°ì‚¬
 	
 	i=0; j=1;
 	while( mid-j >= 0){
@@ -290,7 +290,7 @@ void cal_all(int k) {
 			}
 		}
 		j++;
-	} // ±âÁØÁ¡À» ±âÁØÀ¸·Î ¿À¸¥ÂÊ À§ ¿µ¿ªÀÇ ¿ø¼Òµé Á¶»ç
+	} // ê¸°ì¤€ì ì„ ê¸°ì¤€ìœ¼ë¡œ ì˜¤ë¥¸ìª½ ìœ„ ì˜ì—­ì˜ ì›ì†Œë“¤ ì¡°ì‚¬
 	
 	i=1; j=0;
 	while( mid - i >= 0){
@@ -310,14 +310,14 @@ void cal_all(int k) {
 			}
 		}
 		i++;
-	} // ±âÁØÁ¡À» ±âÁØÀ¸·Î ¿ŞÂÊ ¾Æ·¡ ¿µ¿ªÀÇ ¿ø¼Òµé Á¶»ç
+	} // ê¸°ì¤€ì ì„ ê¸°ì¤€ìœ¼ë¡œ ì™¼ìª½ ì•„ë˜ ì˜ì—­ì˜ ì›ì†Œë“¤ ì¡°ì‚¬
 	
 	if(Knum == 0)
-		return; // k°ª ¿ø¼Ò°¡ ¾ø´Â °æ¿ì ÇÔ¼ö return
+		return; // kê°’ ì›ì†Œê°€ ì—†ëŠ” ê²½ìš° í•¨ìˆ˜ return
 	
 	for(i=0;i<Knum-1;i++)
 		printf("(%d,%d), ",Kx[i],Ky[i]);
-	printf("(%d,%d)",Kx[Knum-1],Ky[Knum-1]); // k°ª ¿ø¼ÒµéÀÇ ÁÂÇ¥¸¦ Ãâ·Â
+	printf("(%d,%d)",Kx[Knum-1],Ky[Knum-1]); // kê°’ ì›ì†Œë“¤ì˜ ì¢Œí‘œë¥¼ ì¶œë ¥
 	
 	return;
 }
