@@ -14,7 +14,7 @@
  - Example
    - Input : 5*5 matrix, k=7
    
-   ![image](https://user-images.githubusercontent.com/26705935/41212049-4c6cd94a-6d76-11e8-9f4f-14c5d9f884e2.png)
+     ![image](https://user-images.githubusercontent.com/26705935/41212049-4c6cd94a-6d76-11e8-9f4f-14c5d9f884e2.png)
    
    - Output : (2,1), (0,3)
    
